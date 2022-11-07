@@ -1,0 +1,39 @@
+{
+  "name": "yogi-cli",
+  "version": "1.0.7",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "yogi": "./bin/index.js"
+  },
+  "keywords": [
+    "chalk",
+    "commander",
+    "download-git-repo",
+    "handlebars",
+    "inquirer",
+    "latest-version",
+    "log-symbols",
+    "ora"
+  ],
+  "author": "dxj",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^2.11.0",
+    "download-git-repo": "^3.0.2",
+    "ejs": "3.1.6",
+    "execa": "4.1.0",
+    "git-clone": "^0.2.0",
+    "handlebars": "^4.7.7",
+    "inquirer": "^8.2.2",
+    "latest-version": "^5.1.0",
+    "log-symbols": "^4.1.0",
+    "ora": "^5.4.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
+  }
+}
