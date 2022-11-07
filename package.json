@@ -1,7 +1,7 @@
 {
   "name": "yogi-cli",
-  "version": "1.0.7",
-  "description": "hello world",
+  "version": "1.0.9",
+  "description": "Hello World",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,10 @@
     "inquirer",
     "latest-version",
     "log-symbols",
-    "ora"
+    "ora",
+    "prettier",
+    "rimraf",
+    "git-clone"
   ],
   "author": "dxj",
   "license": "ISC",
