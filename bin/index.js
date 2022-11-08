@@ -64,7 +64,7 @@ async function cliStart(templateName) {
   if (version !== onLineVersion) {
     console.log(
       chalk.yellow(
-        "⚠️  请使用: < npm install -g yogi-cli@latest > 或 <npm update yogi-cli -g> 更新升级后再创建项目"
+        "⚠️  请关闭运行程序，使用: < npm install -g yogi-cli@latest > 升级后再创建项目"
       )
     );
     console.log();
