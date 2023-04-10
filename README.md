@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-12-02 16:48:27
  * @Description: Nothing Impossible
 -->
-## yogi-cli
+## 脚手架：<yogi-cli>
 
 ### 打造自己的脚手架工具，实现思路
 
