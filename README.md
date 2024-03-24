@@ -2,7 +2,7 @@
  * @Author: yogi
  * @Date: 2023-05-31 10:16:38
  * @LastEditors: yogi
- * @LastEditTime: 2023-05-31 10:16:38
+ * @LastEditTime: 2024-03-25 00:39:00
  * @Description: Nothing Impossible
 -->
 ## yogi-cli
@@ -70,7 +70,7 @@
 ****
 ### 全局安装
 ```
-npm install yogi-cli -g
+npm install -g yogi-cli@latest
 ```
 
 ### 初始化项目
