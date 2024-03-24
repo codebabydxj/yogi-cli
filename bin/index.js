@@ -1,19 +1,18 @@
 #!/usr/bin/env node
 // 使用Node开发命令行工具所执行的Javascript脚本必须在顶部加入 #!/usr/bin/env node
 
-const ora = require('ora');
+const version = require("../package.json").version;
 const chalk = require('chalk');
 const program = require('commander');
-const logSymbols = require('log-symbols');
-const version = require("../package.json").version;
-const latestVersion = require("latest-version");
+const ora = require('ora');
 const {
   mkdirByProjectName,
   choiceTemplate,
   downloadByGit,
   installModules,
 } = require("../lib/create");
-const { nodeProjectQuestion } = require("../lib/questions");
+const { nodeProjectQuestion, builderSelected } = require("../lib/questions");
+const latestVersion = require("latest-version");
 
 program
   .command('init <project-template>')
@@ -57,10 +56,10 @@ if (program.args.length < 2) program.help();
 
 async function cliStart(templateName) {
   /** 1. 版本检测 */
-  const spiner = ora(`${logSymbols.warning}  「 请稍等，版本检测中... 」`).start()
-  spiner.color = "yellow";
+  const loading = ora("「 版本检测中，请稍等... 」").start()
+  loading.color = "yellow";
   const onLineVersion = await latestVersion("yogi-cli");
-  spiner.stop();
+  loading.stop();
   if (version !== onLineVersion) {
     console.log(
       chalk.yellow(
@@ -83,7 +82,11 @@ async function cliStart(templateName) {
     /** 5. 下载模板 */
     await downloadByGit(choice, answers);
 
-    /** 6. 安装依赖 */
-    await installModules();
+    /** 6. 选择构建方式 */
+    let { builder } = await builderSelected();
+    if (builder) {
+      /** 7. 安装依赖 */
+      await installModules(builder);
+    }
   }
 }

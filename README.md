@@ -37,7 +37,7 @@
 
   全局下载yogi-cli失败可以试试
 
-  ```『 npm config set registry=https://registry.npm.taobao.org 』```
+  ```『 npm config set registry=https://registry.npmmirror.com 』```
 
   全局更新工具包
 
@@ -47,7 +47,7 @@
 
   可以自动的解析命令和参数，用于处理用户输入的命令
 
-- download-git-repo
+- download
 
   下载并提取git仓库，用于下载项目模板
 
@@ -66,10 +66,6 @@
 - chalk
 
   可以给终端的字体加上颜色
-
-- log-symbols
-
-  可以在终端上显示出√|×等提示图标
 
 ****
 ### 全局安装
