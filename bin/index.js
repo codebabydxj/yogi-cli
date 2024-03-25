@@ -56,6 +56,7 @@ if (program.args.length < 2) program.help();
 
 async function cliStart(templateName) {
   /** 1. 版本检测 */
+  console.log('当前NodeJs版本:' + process.version)
   const loading = ora("「 版本检测中，请稍等... 」").start()
   loading.color = "yellow";
   const onLineVersion = await latestVersion("yogi-cli");
