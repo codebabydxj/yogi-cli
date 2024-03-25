@@ -1,6 +1,6 @@
 {
   "name": "yogi-cli",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "npm 工具包",
   "main": "index.js",
   "scripts": {
