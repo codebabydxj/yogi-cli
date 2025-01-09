@@ -1,6 +1,6 @@
 {
   "name": "yogi-cli",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "npm 工具包",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "rimraf",
     "git-clone"
   ],
-  "author": "dxj",
+  "author": "yogi",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.2",
