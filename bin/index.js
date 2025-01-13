@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 // 使用Node开发命令行工具所执行的Javascript脚本必须在顶部加入 #!/usr/bin/env node
 
+/*
+ * @Author: yogi
+ * @Date: 2025-01-13
+ * @LastEditors: yogi
+ * @Description: 项目初始化入口
+ */
+
 const version = require("../package.json").version;
 const chalk = require('chalk');
 const program = require('commander');
@@ -20,7 +27,7 @@ program
   .action((templateName) => {
     console.log(
       chalk.greenBright(`
-          ┏┓　    ┏┓
+          ┏┓      ┏┓
         ┏┛┻━━━┛┻┓
         ┃            ┃
         ┃     -      ┃
@@ -41,12 +48,12 @@ program
       `)
     );
     console.log();
-    cliStart(templateName);
+    initStart(templateName);
   })
 
 program.on('--help', function () {
   console.log();
-  console.log(chalk.green('创建项目：yogi init <projectName>'));
+  console.log(chalk.green('执行该命令初始化项目：yogi init <projectName>'));
   console.log();
 });
 
@@ -54,7 +61,7 @@ program.on('--help', function () {
 program.version(version, '-v, --version').parse(process.argv);
 if (program.args.length < 2) program.help();
 
-async function cliStart(templateName) {
+async function initStart(templateName) {
   /** 1. 版本检测 */
   console.log('当前NodeJs版本:' + process.version)
   const loading = ora("「 版本检测中，请稍等... 」").start()
