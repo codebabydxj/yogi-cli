@@ -33,11 +33,11 @@
 
   登录失败E403 试试执行 
 
-  ```『 npm config set registry https://registry.npmjs.org 』```
+  ```『 npm config set registry https://registry.npmjs.org 』 或者 yrm use npm```
 
   全局下载yogi-cli失败可以试试
 
-  ```『 npm config set registry=https://registry.npmmirror.com 』```
+  ```『 npm config set registry=https://registry.npmmirror.com 』 或者 yrm use taobao```
 
   全局更新工具包
 
